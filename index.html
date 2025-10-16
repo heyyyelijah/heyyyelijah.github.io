@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Automation Specialist</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        nav {
+            background: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #764ba2;
+        }
+
+        section {
+            padding: 60px 0;
+            background: white;
+            margin: 20px 0;
+        }
+
+        section:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        h2 {
+            font-size: 2em;
+            margin-bottom: 30px;
+            text-align: center;
+            color: #667eea;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .skill-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .skill-card h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        .project-content {
+            padding: 20px;
+        }
+
+        .project-content h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .tag {
+            background: #e9ecef;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            color: #667eea;
+        }
+
+        .contact-info {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .contact-btn:hover {
+            background: #764ba2;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            nav ul {
+                gap: 15px;
+            }
+
+            .projects {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Your Name</h1>
+            <p>Automation Specialist | n8n Workflow Expert</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <p>I'm a passionate automation specialist with expertise in building efficient workflows using n8n and other automation tools. I help businesses save time and reduce costs by automating repetitive tasks and connecting various platforms seamlessly.</p>
+                <p style="margin-top: 20px;">With a focus on practical solutions, I've automated processes across marketing, sales, customer support, and operations, delivering measurable results for teams and organizations.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2>Skills & Tools</h2>
+            <div class="skills">
+                <div class="skill-card">
+                    <h3>Workflow Automation</h3>
+                    <p>n8n, Zapier, Make (Integromat)</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Integrations</h3>
+                    <p>APIs, Webhooks, Database connections</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Tools & Platforms</h3>
+                    <p>Google Workspace, Slack, Airtable, Notion</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Data Processing</h3>
+                    <p>Data transformation, ETL processes, JSON/CSV handling</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2>Automation Projects</h2>
+            <div class="projects">
+                <div class="project-card">
+                    <div class="project-image">Project 1</div>
+                    <div class="project-content">
+                        <h3>Automated Lead Processing System</h3>
+                        <p>Built an n8n workflow that automatically captures leads from multiple sources, enriches data, and distributes to sales team based on territory and product interest.</p>
+                        <p><strong>Impact:</strong> Reduced lead response time by 75%</p>
+                        <div class="project-tags">
+                            <span class="tag">n8n</span>
+                            <span class="tag">CRM Integration</span>
+                            <span class="tag">API</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">Project 2</div>
+                    <div class="project-content">
+                        <h3>Social Media Content Scheduler</h3>
+                        <p>Created an automated workflow that schedules and posts content across multiple social media platforms from a central Google Sheet, with approval workflows.</p>
+                        <p><strong>Impact:</strong> Saved 10 hours/week of manual posting</p>
+                        <div class="project-tags">
+                            <span class="tag">n8n</span>
+                            <span class="tag">Social Media APIs</span>
+                            <span class="tag">Google Sheets</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">Project 3</div>
+                    <div class="project-content">
+                        <h3>Customer Support Ticket Routing</h3>
+                        <p>Automated ticket classification and routing system that analyzes incoming support requests and assigns them to the right team member based on expertise and workload.</p>
+                        <p><strong>Impact:</strong> Improved response time by 60%</p>
+                        <div class="project-tags">
+                            <span class="tag">n8n</span>
+                            <span class="tag">Webhooks</span>
+                            <span class="tag">AI Integration</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <div class="contact-info">
+                <p>Interested in automation solutions or want to discuss a project? I'd love to hear from you!</p>
+                <div class="contact-links">
+                    <a href="mailto:your.email@example.com" class="contact-btn">Email Me</a>
+                    <a href="https://linkedin.com/in/yourprofile" class="contact-btn">LinkedIn</a>
+                    <a href="https://n8n.io/workflows/yourprofile" class="contact-btn">n8n Workflows</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Your Name. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
